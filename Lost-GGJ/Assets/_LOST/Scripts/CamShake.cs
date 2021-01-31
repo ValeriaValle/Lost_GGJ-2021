@@ -38,14 +38,12 @@ public class CamShake : MonoBehaviour
         {
             camShakeInst.Start(1f);
             camShakeInst.RoughnessScale = increaseShakeFactor / guardianDistance.var;
-            Debug.Log("Shake");
         }
 
         if (startedShake && !isShaking)
         {
             camShakeInst.Stop(1f, false);
             startedShake = false;
-            Debug.Log("StopShake");
         }
     }
     #endregion
