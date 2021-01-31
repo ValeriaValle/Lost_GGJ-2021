@@ -10,6 +10,8 @@ public class SelectionManager : MonoBehaviour
 
     [SerializeField]
     private Vector3 selectedScale;
+    [SerializeField]
+    private GameObject txtInteract;
 
     [SerializeField]
     private float rayDistance;
@@ -27,10 +29,12 @@ public class SelectionManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit, rayDistance, layerMask))
         {
             crosshair.rectTransform.localScale = selectedScale;
+            txtInteract.SetActive(true);
         }
         else
         {
             crosshair.rectTransform.localScale = new Vector3(1f, 1f, 1f);
+            txtInteract.SetActive(false);
         }
 
         if (Input.GetMouseButtonDown(0))
