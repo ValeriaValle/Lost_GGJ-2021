@@ -12,11 +12,16 @@ public class GuardianBehaviour : MonoBehaviour
     [SerializeField]
     private float detectDistance = 5f;
 
+    private AudioSource guardianAudio;
+    [SerializeField]
+    private float increaseVolFactor = 1f;
+
     [Header("Global Variables")]
     [SerializeField]
     private GenericFloat distance;
     [SerializeField]
     private GenericBool blurScreen;
+
 
     public UnityEvent shakeCam, stopShakeCam;
 
@@ -27,6 +32,7 @@ public class GuardianBehaviour : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        guardianAudio = GetComponent<AudioSource>();
         blurScreen.var = false;
     }
 
@@ -38,11 +44,13 @@ public class GuardianBehaviour : MonoBehaviour
         {
             shakeCam.Invoke();
             blurScreen.var = true;
+            guardianAudio.volume = increaseVolFactor / distance.var;
         }
         if (distance.var >= detectDistance)
         {
             stopShakeCam.Invoke();
             blurScreen.var = false;
+            guardianAudio.volume = 0f;
         }
     }
     #endregion
