@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51a455f38a53fd49b5898f366617bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectDistance: 20
+  detectDistance: 10
   distance: {fileID: 11400000, guid: a1bd5a72cc90ee1499e75542a8f3f893, type: 2}
   blurScreen: {fileID: 11400000, guid: 96e534df3f9de5e48b544db9be3a6c87, type: 2}
   shakeCam:
