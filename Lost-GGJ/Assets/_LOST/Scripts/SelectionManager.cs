@@ -60,6 +60,6 @@ public class SelectionManager : MonoBehaviour
                 Interaction.Invoke();
             }
         }
-    }
-    #endregion
 }
+#endregion
+    }
