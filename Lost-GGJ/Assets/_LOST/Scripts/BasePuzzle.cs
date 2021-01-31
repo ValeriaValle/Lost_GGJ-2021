@@ -24,8 +24,7 @@ public class BasePuzzle : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Piece");
-            currentIdx = 0;
+            ResetPuzzle();
         }
 
         if (currentIdx > 3)
@@ -34,6 +33,12 @@ public class BasePuzzle : MonoBehaviour
             gameObject.GetComponent<BasePuzzle>().enabled = false;
         }
 
+    }
+
+    public void ResetPuzzle()
+    {
+        Debug.Log("Wrong");
+        currentIdx = 0;
     }
     #endregion
 }
