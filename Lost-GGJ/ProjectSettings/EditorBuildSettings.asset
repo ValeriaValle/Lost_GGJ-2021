@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_LOST/Scenes/MainMenu.unity
     guid: 68efbd52dd15386448b55e7484293217
   - enabled: 1
-    path: Assets/_LOST/Scenes/AmbientTest 1.unity
+    path: Assets/_LOST/Scenes/Level_01.unity
     guid: 7d117e50d0458be4b962777818c62d7a
   m_configObjects: {}

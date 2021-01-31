@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityTools.ScriptableVariables;
 
 public class BasePuzzle : MonoBehaviour
@@ -11,6 +12,8 @@ public class BasePuzzle : MonoBehaviour
     [SerializeField]
     private int[] puzzleSolution;
     private int currentIdx = 0;
+
+    public UnityEvent onPuzzleSolved;
     #endregion
 
     #region OTHER_METHODS
@@ -30,6 +33,7 @@ public class BasePuzzle : MonoBehaviour
         if (currentIdx > 3)
         {
             Debug.Log("Puzzle Solved");
+            onPuzzleSolved.Invoke();
             gameObject.GetComponent<BasePuzzle>().enabled = false;
         }
 

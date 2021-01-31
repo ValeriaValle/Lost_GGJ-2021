@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 5104035900307302084}
   - component: {fileID: 5104035900307302087}
   - component: {fileID: 5104035900307302085}
+  - component: {fileID: 46501376}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -307,6 +308,102 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!82 &46501376
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5104035900307302086}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b53696c7d15cac5409742365fdcd10d7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5104035900425198005
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +479,8 @@ GameObject:
   - component: {fileID: 5104035900519431487}
   - component: {fileID: 5104035900519431458}
   - component: {fileID: 5104035900519431459}
+  - component: {fileID: 1114057986168340316}
+  - component: {fileID: 1982354417319357845}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: MainCamera
@@ -483,6 +582,85 @@ MonoBehaviour:
   shakeFear: {fileID: 11400000, guid: 4079c669f6cb0774a8a8f879edddce1e, type: 2}
   increaseShakeFactor: 3
   guardianDistance: {fileID: 11400000, guid: a1bd5a72cc90ee1499e75542a8f3f893, type: 2}
+--- !u!114 &1114057986168340316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5104035900519431486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!114 &1982354417319357845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5104035900519431486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e790cd217109a467a9453f8d9441503e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listEvents:
+  - eventName: ShakeCam
+    Event: {fileID: 11400000, guid: df321a5ca5f3e5e44aa14ef61a5245f4, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5104035900519431459}
+          m_TargetAssemblyTypeName: CamShake, Assembly-CSharp
+          m_MethodName: StartCamShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventName: StopShakeCam
+    Event: {fileID: 11400000, guid: 66f5ca65d84c934448241f8405c9a933, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5104035900519431459}
+          m_TargetAssemblyTypeName: CamShake, Assembly-CSharp
+          m_MethodName: StopCamShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8052441281621042525
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +720,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -749,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538d13a34d00a7c4c902eba113495a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseBlurFactor: 0.8
+  increaseBlurFactor: 0.9
   blurScreen: {fileID: 11400000, guid: 96e534df3f9de5e48b544db9be3a6c87, type: 2}
   guardianDistance: {fileID: 11400000, guid: a1bd5a72cc90ee1499e75542a8f3f893, type: 2}
 --- !u!1 &8052441283319214870
