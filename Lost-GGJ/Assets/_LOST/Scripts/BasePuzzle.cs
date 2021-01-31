@@ -13,7 +13,7 @@ public class BasePuzzle : MonoBehaviour
     private int[] puzzleSolution;
     private int currentIdx = 0;
 
-    public UnityEvent onPuzzleSolved;
+    public UnityEvent onCorrectPiece, onWrongPiece, onPuzzleSolved;
     #endregion
 
     #region OTHER_METHODS
@@ -22,7 +22,7 @@ public class BasePuzzle : MonoBehaviour
     {
         if (currentPiece.var == puzzleSolution[currentIdx])
         {
-            Debug.Log("Correct Piece");
+            onCorrectPiece.Invoke();
             currentIdx++;
         }
         else
@@ -41,7 +41,7 @@ public class BasePuzzle : MonoBehaviour
 
     public void ResetPuzzle()
     {
-        Debug.Log("Wrong");
+        onWrongPiece.Invoke();
         currentIdx = 0;
     }
     #endregion

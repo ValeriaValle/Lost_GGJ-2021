@@ -598,6 +598,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 919f13a4da6527b45bf89d30d56c3ceb, type: 3}
+--- !u!82 &395624966 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5879675346095858167, guid: 919f13a4da6527b45bf89d30d56c3ceb, type: 3}
+  m_PrefabInstance: {fileID: 395624965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &451064161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1484,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 395624966}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 0af39ec2e2d74af47b2b2aca8192a616, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
