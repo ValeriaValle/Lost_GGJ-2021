@@ -814,5 +814,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 36060398418224031, guid: 919f13a4da6527b45bf89d30d56c3ceb, type: 3}
+      propertyPath: nextSceneIdx
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 919f13a4da6527b45bf89d30d56c3ceb, type: 3}

@@ -35,14 +35,12 @@ public class FakeFog : MonoBehaviour
             tempColor.a = increaseFogFactor * distance;
             fogImage.color = tempColor;
             Debug.DrawLine(transform.position, player.position, Color.green);
-            Debug.Log("Increase Fog");
         }
         if (distance <= detectDistance)
         {
             var tempColor = fogImage.color;
             tempColor.a = 0f;
             fogImage.color = tempColor;
-            Debug.Log("Decrease Fog");
         }
     }
     #endregion
